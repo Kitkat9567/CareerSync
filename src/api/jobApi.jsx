@@ -12,7 +12,6 @@ export const getAllJobs = async (jobs, role) => {
 };
 
 export const login = async (account, payload) => {
-  console.log(import.meta.env.VITE_API_URL);
   
   try {
     if (account === "employer") {

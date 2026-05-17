@@ -284,6 +284,7 @@ export const LoginBody = ({
   onTogglePassword,
   onSubmit,
   loading,
+  onRegisterClick,
 }) => (
   <Box
     sx={{
@@ -432,7 +433,15 @@ export const LoginBody = ({
         color="text.secondary"
         sx={{ mt: 3 }}
       >
-        Don&apos;t have an account? <Link href="#">Create an Account</Link>
+        Don&apos;t have an account?{" "}
+        <Link
+          component="button"
+          variant="body2"
+          onClick={onRegisterClick}
+          sx={{ fontWeight: 600, cursor: "pointer" }}
+        >
+          Create an Account
+        </Link>
       </Typography>
 
       <Box

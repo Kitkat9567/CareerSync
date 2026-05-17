@@ -455,7 +455,6 @@ export const careerSyncTheme = createTheme({
     // ── CssBaseline ───────────────────────────────────────────────────────────
     MuiCssBaseline: {
       styleOverrides: `
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
         * { box-sizing: border-box; }
         body { background-color: ${tokens.color.background}; }
       `,

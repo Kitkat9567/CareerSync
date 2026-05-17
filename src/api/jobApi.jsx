@@ -12,18 +12,22 @@ export const getAllJobs = async (jobs, role) => {
 };
 
 export const login = async (account, payload) => {
-  
   try {
-    if (account === "employer") {
-      const response = await axiosInstance.post("/login/loginCompany", payload);
-      return response.data;
-    }
-    if (account === "candidate") {
-      const response = await axiosInstance.post("/login/loginUser", payload);
-      return response.data;
-    }
-    return "There was an error";
+    const response = await axiosInstance.post(
+      `/login/loginUser?type=${account}`,
+      payload,
+    );
+    return response.status
   } catch (error) {
     throw error;
   }
 };
+
+export const register = async(account, payload) => {
+  try {
+    const response = await axiosInstance.post(`/register/reg?type=${account}`,payload)
+    return response.status
+  } catch (error) {
+    throw error
+  }
+}
